@@ -1361,60 +1361,31 @@ svg {
   letter-spacing: .15em;
 }
 
-.social-art {
+.social-gallery {
   display: grid;
-  place-items: center;
-  background: var(--accent);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 12px;
+  background: #d8d8d8;
 }
 
-.social-phone {
-  width: 52%;
-  height: 88%;
-  padding: 16px;
-  border: 4px solid var(--ink);
-  border-radius: 20px;
-  color: var(--ink);
-  background: var(--paper);
-  box-shadow: 12px 12px 0 rgba(21, 21, 21, .18);
+.social-preview {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #e8e8e8;
 }
 
-.social-phone > span {
-  font-size: 7px;
-  font-weight: 700;
-  letter-spacing: .1em;
+.social-preview img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transform: scale(1.02);
+  transition: transform .35s;
 }
 
-.social-phone > i {
-  display: block;
-  width: 85%;
-  height: 7px;
-  margin-top: 9px;
-  background: #c9cac3;
-}
-
-.social-phone > i:nth-of-type(1) {
-  width: 100%;
-  height: 62px;
-  margin: 14px 0 12px;
-  background: var(--accent);
-}
-
-.social-phone > i:nth-of-type(3) {
-  width: 62%;
-}
-
-.social-phone strong {
-  display: block;
-  margin-top: 12px;
-  color: var(--accent);
-  font-size: 34px;
-  line-height: 1;
-  letter-spacing: -.06em;
-}
-
-.social-phone small {
-  font-size: 6px;
-  letter-spacing: .1em;
+.social-preview:hover img {
+  transform: scale(1.05);
 }
 
 .experience-layout {
